@@ -1,0 +1,910 @@
+html, body{
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    scroll-behavior: smooth;     
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto Slab", sans-serif;
+    cursor: default;
+    background: #F1F1F1;
+}
+
+.logo_nav {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background: url('assets/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    height: 236px;
+    width: 236px;
+    margin: 0 40px;
+    text-align: center;
+    text-decoration: none;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 0px;
+  }
+ 
+  .photo-fun, .photo-pro {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: space-aound;
+      align-items: center;
+      height: 800px;
+      width: 80%;
+  }
+
+  .photo-pro div, .photo-fun div {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin: 5px;
+  }
+
+  .photo-pro #alexis-photo { background: url('assets/imagesGallery/Photos pro/Alexis pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #eloise-photo { background: url('assets/imagesGallery/Photos pro/Elo pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #gautier-photo { background: url('assets/imagesGallery/Photos pro/Gautier pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #julien-photo { background: url('assets/imagesGallery/Photos pro/Julien pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #mehdi-photo { background: url('assets/imagesGallery/Photos pro/Mehdi pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #nadège-photo { background: url('assets/imagesGallery/Photos pro/Nadège pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #pierre-photo { background: url('assets/imagesGallery/Photos pro/Pierre pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #riad-photo { background: url('assets/imagesGallery/Photos pro/Riad pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #sibel-photo { background: url('assets/imagesGallery/Photos pro/Sibel pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #thomas-photo { background: url('assets/imagesGallery/Photos pro/Thomas pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #ugo-photo { background: url('assets/imagesGallery/Photos pro/Ugo pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #willy-photo { background: url('assets/imagesGallery/Photos pro/Willy pro.jpg'); background-size: cover; background-position: center; }
+  .photo-pro #zak-photo { background: url('assets/imagesGallery/Photos pro/Zak pro.jpg'); background-size: cover; background-position: center; }
+
+  .photo-fun #alexis-photo { background: url('assets/imagesGallery/Photos fun/Alexis fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #eloise-photo { background: url('assets/imagesGallery/Photos fun/Elo fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #gautier-photo { background: url('assets/imagesGallery/Photos fun/Gautier fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #julien-photo { background: url('assets/imagesGallery/Photos fun/Julien fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #mehdi-photo { background: url('assets/imagesGallery/Photos fun/Mehdi fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #nadège-photo { background: url('assets/imagesGallery/Photos fun/Nadège fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #pierre-photo { background: url('assets/imagesGallery/Photos fun/Pierre fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #riad-photo { background: url('assets/imagesGallery/Photos fun/Riad fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #sibel-photo { background: url('assets/imagesGallery/Photos fun/Sibel fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #thomas-photo { background: url('assets/imagesGallery/Photos fun/Thomas fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #ugo-photo { background: url('assets/imagesGallery/Photos fun/Ugo fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #willy-photo { background: url('assets/imagesGallery/Photos fun/Willy fun.jpg'); background-size: cover; background-position: center; }
+  .photo-fun #zak-photo { background: url('assets/imagesGallery/Photos fun/Zak fun.jpg'); background-size: cover; background-position: center; }
+
+  .menu {
+      background-color: #f99797;
+      z-index: 999;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+  }
+  .bouton-menu {
+    color: white;
+    font-size: 35px;
+    background-color: #f99797;
+    border: none;
+    cursor: pointer;
+    padding:28px;
+    margin-bottom: 8px;
+  }
+  .bouton-menu:hover {
+    background-color: #EC9191;
+    -moz-transition: all .2s ease-in-out; 
+    -webkit-transition: all .2s ease-in-out;  
+    transition: all .2s ease-in-out;
+}
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropdown2 {
+      position: relative;;  
+      transition: all .2s ease-in-out;
+      z-index: 10;
+  }
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropdown2 {
+      position: relative;
+      display: inline-block
+  }
+  .dropdown-child {
+      background-color: #f99797;
+      width: 100%;
+      position: absolute; 
+      transform: scaleY(0); 
+      transform-origin: top;
+      transition: transform .25s;
+      opacity: 0;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      z-index: 100;
+  }
+  .dropdown-child a {
+      padding: 20px;
+      text-decoration: none;
+      display: block;
+      -moz-transition: all .2s ease-in-out; 
+      -webkit-transition: all .2s ease-in-out;  
+      transition: all .2s ease-in-out;
+  }
+  .dropdown-child:hover {
+    background-color: #DE8888;
+  }
+  header a:hover{
+      background-color: #FFDBD2;
+      width:auto; 
+  }
+  .dropdown:hover .dropdown-child {
+      transform: scaleY(1);
+      opacity: 1;
+  }
+  .link{
+      color: white;
+  }
+  .link:hover{
+      background-color: #DE8888;
+  }    
+  .autrebouton:hover {
+      background-color: #FF8C6F;
+      -moz-transition: all .2s ease-in-out; 
+      -webkit-transition: all .2s ease-in-out;  
+      transition: all .2s ease-in-out;
+      z-index: 10;
+  }
+  .link:hover{
+      background-color: #FF8C6F;
+      width:auto; 
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+  }
+
+  #burger{
+      display: none;
+  }
+
+  
+
+  @media screen and (max-width: 961px){                                         /*Nav telephone*/
+      .menu {
+          padding-bottom: 80px;
+          font-size: 14px;
+          z-index: 10;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+      }
+      #burger{
+        background-image: url("assets/images/icon_burger.png");
+        background-size: cover;
+        background-position:center;
+        display: inline-block;
+        position: absolute;
+        margin-left: 42%;
+        margin-right: auto;
+        z-index: 50;
+        margin-top: 45px;
+        width: 50px;
+        height: 50px;
+        transition-duration: 0.5s;
+      }
+      #principal{
+          margin-top: 15px;
+          margin-left: 18px;
+          font-size: 17px;
+          display: none;
+          padding: 0;
+          padding-right: 41px;
+          z-index: 10;
+      }
+      #formation{
+          margin-top: 15px;
+          margin-left: 10px;
+          font-size: 17px;
+          display: none;
+          padding: 0;
+          padding-left: 0px;
+          z-index: 10;
+          margin-right: 10px;
+      }
+      .bouton-menu {
+          
+          font-size: 12px;
+      }
+      #drop2{
+          opacity: 0;
+          transform: scaleY(0);
+      }
+      .logo_nav {
+          display: block;
+          border-top-left-radius: 24px;
+          border-bottom-left-radius: 0px;
+          margin-left: 27%;
+          height: 80px;
+          padding: 80px;
+          padding-top: 20px;
+          width: 80px;
+          margin-bottom: 42px;
+      }
+      .dropdown-child a{
+          display: block;
+          padding: 10px;
+          padding-bottom: 20px;
+      }
+  }
+
+
+  /* -------- Eloïse ------------------ */
+
+.container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 74px);
+    /*padding-bottom: 40%;*/
+    background: transparent;
+}
+
+#titre {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "rubik",sans-serif; 
+    font-size: 48px;
+    color:#DE8888;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+
+.slider {
+    height:100% ; 
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+
+
+.slides {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw * 3 );
+    height: 100%;
+    animation: glisse 25s infinite;
+    z-index: -1;
+    background-color: #111;
+}
+
+.slide1 {
+    width: 100%;
+    background: url('assets/images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide2 {
+    width: 100%;
+    background: url('assets/images/toit.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide3 {
+    width: 100%;
+    background: url('assets/images/labo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100vw);
+    }
+
+    43% {
+        transform: translateX(-100vw);
+    }
+
+    66% {
+        transform: translateX(-200vw);
+    }
+    76% {
+        transform: translateX(-200vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+/*    THOMAS      */
+
+#pied_page{
+    width: 100%;
+    margin-top: 80px;
+}
+
+#txt_pied{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    background-color: #f99797;
+}
+
+#txt_pied {
+    margin: 0;  
+}
+
+#img_pied{
+    width: 40px;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#team{
+    font-size: 20px;
+}
+
+#img_ancre{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background: url('assets/images/logo_ancre.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(150, 185, 236);
+    background-position: center;
+    border: none;
+    border-radius: 20px;
+    float: left;
+    height: 96px;
+    width: 96px;
+    margin: 15px 15px;
+}
+
+#tableau
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.profil{
+    text-align: center;
+    margin: 5px;
+    margin-top: 5px;
+    font-family: 'Questrial', sans-serif;
+    color: black;
+}
+
+#ancre{
+    position: fixed;
+    top: 25%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    height: 110px;
+    width: 90px;
+    flex-direction: column;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 999;
+    transition: all 1s;
+    background-color: #FF896F;
+    border: 1.5px ridge black;
+}
+
+#ancre:hover{
+    display: flex;
+    align-items: center;
+    height: 570px;
+    width: 110px;
+    flex-direction: column;
+    background-color: #FF896F;
+}
+
+#h4tab{
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 661px){
+    #img_ancre{
+        display: flex;
+        width: 45px;
+        height: auto;
+        justify-content: center;
+        margin-left: 1px;
+        padding-top: 10px;
+    }
+    
+    #tableau
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profil{
+        text-align: center;
+        font-size: 12px;
+        margin: 5px;
+        margin-bottom: 15px;
+        font-family: 'Questrial', sans-serif;
+        color: black;
+        font-weight: bold;
+    }
+    
+    #ancre{
+        position: fixed;
+        top: 13%;
+        left: 0%;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        width: 75px;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 1s;
+    }
+    
+    #ancre:hover{
+        display: flex;
+        align-items: center;
+        height: 590px;
+        width: 75px;
+        flex-direction: column;
+    }
+    
+    #h4tab{
+        margin-bottom: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-height: 680px){
+    #ancre{
+            position: fixed;
+            top: 10%;
+            left: 0%;
+            display: flex;
+            align-items: center;
+            height: 80px;
+            width: 75px;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 1s;
+    }
+}
+
+/* ----------------  Alexis  ------------------------- */
+
+:root {
+    --primary-color: #f99797;
+    --secondary-color: #F1F1F1;  
+}
+
+#img-julien { background: url('assets/Photos pro/Julien pro.jpg'); background-size: cover; background-position: center; }
+#img-eloise { background: url('assets/Photos pro/Elo pro.jpg'); background-size: cover; background-position: center; }
+#img-ugo { background: url('assets/Photos pro/Ugo pro.jpg'); background-size: cover; background-position: center; }
+#img-thomas { background: url('assets/Photos pro/Thomas pro.jpg'); background-size: cover; background-position: center; }
+#img-nadege { background: url('assets/Photos pro/Nadège pro.jpg'); background-size: cover; background-position: center; }
+#img-alexis { background: url('assets/Photos pro/Alexis pro.jpg'); background-size: cover; background-position: center; }
+#img-willy { background: url('assets/Photos pro/Willy pro.jpg'); background-size: cover; background-position: center; }
+#img-gautier { background: url('assets/Photos pro/Gautier Pro.jpg'); background-size: cover; background-position: center; }
+#img-mehdi { background: url('assets/Photos pro/Mehdi pro.jpg'); background-size: cover; background-position: top; }
+#img-pierre { background: url('assets/Photos pro/Pierre pro.jpg'); background-size: cover; background-position: bottom; }
+#img-riad { background: url('assets/Photos pro/Riad pro.jpg'); background-size: cover; background-position: center; }
+#img-sibel { background: url('assets/Photos pro/Sibel pro.jpg'); background-size: cover; background-position: center; }
+#img-zakaria { background: url('assets/Photos pro/Zak pro.jpg'); background-size: cover; background-position: center; }
+
+
+
+#card-section a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.card img {
+    vertical-align: middle;
+}
+
+/*  -------  BEGINNING PROFILE SECTION  ------- */
+
+#profile-watching {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    animation: spawn .5s forwards;
+}
+
+#profile {
+    width: 80%;
+    min-height: 300px;
+    height: 70%;
+    padding: 10px 20px;
+    /*background: var(--primary-color);*/   
+    border-radius: 20px;
+    color: white;
+}
+
+#profile-head {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+#profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    background: url('assets/images/Photos pro/Julien pro.jpg');
+    background-size: cover;
+}
+
+#profile-name {
+    position: relative;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 20px;
+    animation: from-top 1s;
+}
+
+#profile-description {
+    font-size: 1em;
+    margin: 20px 10px;
+    height: calc(100% - 256px);
+    /*color: white;*/
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /*color: white;*/
+}
+
+.profile-content ul {
+    list-style-type: none;
+}
+
+.profile-content ul li {
+    font-size: 1em;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.profile-content-list {
+    position: relative;
+    animation: from-left 1s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.experience-title {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    animation: from-left 1.5s forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+
+
+@keyframes experience-title {
+    100% {
+        left: 0;
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes spawn {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes from-top {
+    0% {
+        opacity: 0;
+        top: -10%;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes from-left {
+    0% {
+        opacity: 0;
+        left: 10%;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/*  ---------  END PROFILE SECTION  --------- */
+
+.card-section {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+#julien {
+    width: 80%;
+    margin: 40px auto;
+}
+
+#card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}   
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 450px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 10px 0;
+    padding: 40px 0 20px 0;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px #A1A1A1;
+    transition: all .25s; 
+    cursor: pointer;
+    background-color: #FDA18D;
+}
+
+#formateur {
+    background: black;
+}
+
+.name-image {
+    border-radius: 50%;
+    height: 128px;
+    width: 128px;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-container .name {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    margin-top: -20px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.fun-mode {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card:hover .fun-mode {
+    opacity: 1;
+}
+
+.card ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-weight: 400;
+    max-height: 150px;
+    width: 80%;
+    text-align: center;
+}
+
+.card li {
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 10px auto;
+    color: white;
+}
+
+.card .name {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    margin-top: -20px;
+    border-radius: 5px;
+}
+
+.card-title {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: white;
+}
+
+.media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.media .profil {
+    padding: 10px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.media .media-icon {
+    display: absolute;
+    align-items: center;
+}
+
+.media-icon img {
+    height: 32px;
+    border-radius: 2px;
+    margin: 0 5px;
+    transition: transform .25s;
+}
+
+.media-icon img:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (min-width: 640px) {
+
+    .card {
+        margin: 10px 1vw;
+        width: 80%;
+        height: 500px;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 26px;
+    }
+
+    .media-icon img {
+        height: 48px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #profile {
+        width: 40%;     
+        height: 700px;
+        padding: 40px;
+    }
+
+    #profile-image {
+        width: 256px; 
+        height: 256px;
+    }
+
+    #profile-name {
+        font-size: 4em;
+    }
+    
+    .profile-content ul li {
+        font-size: 1em;
+        margin: 20px 0;
+    }
+    .experience-title {
+        font-size: 36px;
+    }
+
+    #julien {
+        margin: 40px auto;
+        width: calc(80% / 3);
+        height: 500px;
+        font-size: 20px;
+    }
+
+    #card-container {
+        flex-direction: row;
+        width: 80vw;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 0;
+        margin: 10px 1vw;
+        min-width: calc(33% - 5vw);
+        height: 500px;
+        font-size: 20px;
+    }
+
+    .card-title {
+        white-space: initial;
+        overflow: visible;
+    }
+
+    .media {
+        align-items: center;
+        margin: 0;
+    }
+
+    .media-icon {
+        flex-direction: column-reverse;
+        max-height: calc(64px + 20px);
+        flex-wrap: wrap;
+    }
+
+    .media-icon img {
+        height: 32px;
+    }
+
+    .media-icon img:nth-child(odd) {
+        margin-bottom: 10px;
+    }
+}
